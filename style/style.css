@@ -42,7 +42,9 @@ button {
 .header {
 	position: absolute;
 	left: 0;
+	z-index: 999;
 	right: 0;
+	background-color: #fff;
 	margin-bottom: 130px;
 }
 
@@ -389,6 +391,7 @@ button {
 
 .receipts-item-model {
 	font-size: 19px;
+	color: black;
 	font-weight: 700;
 }
 
@@ -1344,7 +1347,7 @@ a {
 }
 
 .filter-text {
-	color: #B5B5B5;
+	display: none;
 }
 
 .catalog__items {
@@ -1506,6 +1509,133 @@ textarea{
 	font-weight: 400;
 }
 /* DELIVETY PAGE */
+/* tovar page */
+.tovar__items{
+	display: flex;
+	gap: 50px;
+	margin-bottom: 120px;
+}
+.tovar__item {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.tovar__title {
+	font-size: 45px;
+	width: 640px;
+	margin-bottom: 20px;
+	font-weight: 400;
+}
+.tovar__subtitle {
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 28px;
+	margin-bottom: 40px;
+}
+.tovar__pol {
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+.tovar__mater {
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+.tovar__price {
+	font-size: 30px;
+	margin-bottom: 50px;
+}
+.tovar__btn {
+	padding: 20px;
+	font-size: 20px;
+	text-align: center;
+	border: 1px solid #1E1E1E;
+	background-color: #1E1E1E;
+}
+.tovar__btn:hover{
+	background-color: #fff;
+	color: black;
+}
+/* tovar page */
+/* basket page */
+.basket__title {
+	font-size: 45px;
+	font-weight: 400;
+	margin-bottom: 50px;
+}
+.basket__items {
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+	margin-bottom: 120px;
+}
+.basket__item {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+.backet__itembox {
+	display: flex;
+	justify-content: space-between;
+	gap: 40px;
+	align-items: center;
+	border: 1px solid #ECECEC;
+	padding: 15px;
+}
+
+.basket__name {
+	font-size: 20px;
+	font-weight: 400;
+}
+.basket__price {
+	font-size: 17px;
+	font-weight: 400;
+}
+.basket__calc {
+	display: flex;
+}
+.basket__calc p{
+	font-size: 14px;
+	border-top: 1px solid #323638;
+	border-bottom: 1px solid #323638;
+	padding: 18px;
+}
+.basket__calc button{
+	padding: 15px;
+}
+.basket__endprice {
+	font-size: 17px;
+	font-weight: 400;
+}
+.basket__basket {
+	border: none;
+	background-color: white;
+}
+.basket__item-title {
+	color: #1D1D27;
+	font-size: 28px;
+	font-weight: 400;
+	margin-bottom: 25px;
+}
+.basket__pricebox {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 30px;
+}
+.basket__item-right{
+	background-color: #F8F8F8;
+	padding: 20px;
+}
+.basket__item-btn {
+	text-align: center;
+	background-color: #1E1E1E;
+	padding: 24px 78px;
+	border: 1px solid #1E1E1E;
+}
+.basket__item-btn:hover{
+	background-color: #fff;
+	color: black;
+}
+/* basket page */
 @media screen and (max-width: 800px) {
 	.header-top-nav {
 		display: none;
