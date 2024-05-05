@@ -210,8 +210,7 @@ button {
 .promo-img {
 	width: 600px;
 	height: 600px;
-	position: relative;
-	bottom: 100px;
+	margin-top: -100px;
 }
 
 .promo-img-box {
@@ -1666,5 +1665,166 @@ textarea{
 
 	.icon-box {
 		display: none;
+	}
+	.footer{
+		height: 100%;
+		padding: 35px;
+	}
+	.footer__items{
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+	.footer__bottom{
+		gap: 20px;
+	}
+	.catalog__items{
+		grid-template-columns: repeat(1,1fr);
+	}
+	.receipts__item{
+		width: 380px;
+		margin: 5px;
+	}
+	.sold__item{
+		width: 380px;
+		margin: 5px;
+	}
+	.sold-title{
+		margin: 15px;
+	}
+	.receipts-title{
+		margin: 15px;
+	}
+	.title-box{
+		margin: 15px;
+	}
+	.promo-img{
+		width: 300px;
+		height: 300px;
+		margin-left: 35px;
+	}
+	.about__items{
+		flex-wrap: wrap;
+		gap: 220px;
+	}
+	.about{
+		margin: 15px;
+	}
+	.about__item-text{
+		width: 350px;
+	}
+	.about__item-right{
+		width: 350px;
+		height: 400px;
+	}
+	.about__itembtn{
+		text-align: left;
+	}
+	.breadcrumbs{
+		padding-top: 100px;
+	}
+	.promo{
+		margin-bottom: 50px;
+	}
+	.promo-subtitle{
+		width: 350px;
+	}
+	.delivery__subtitle{
+		width: 350px;
+	}
+	.delivery{
+		margin: 15px;
+	}
+	.order{
+		margin: 15px;
+	}
+	.order__subtitle{
+		width: 350px;
+	}
+	.order__text{
+		width: 300px;
+	}
+	.order__items{
+		flex-direction: column;
+	}
+	.order__form{
+		width: 350px;
+	}
+	.Authorization__form input{
+		width: 100%;
+		padding: 16px 10px 16px 20px;
+	}
+	.order__form-btn{
+		text-align: center;
+	}
+	.basket{
+		margin: 15px;
+	}
+	.basket__items{
+		flex-direction: column;
+		gap: 30px;
+		margin-left: 25px;
+	}
+	.basket__item{
+		gap: 10px;
+	}
+	.Authorization{
+		margin-bottom: 500px;
+	}
+	.Authorization__item{
+		padding: 10px 10px;
+	}
+	.Authorization__item p{
+		width: 320px;
+	}
+	.auth__text{
+		margin-bottom: 60px;
+	}
+	.Authorization__item{
+		gap: 0;
+	}
+	.Authorization__title{
+		margin: 15px;
+	}
+	.regist__items{
+		flex-direction: column;
+		width: 350px;
+		border: none;
+		margin-left: 15px;
+	}
+	.tovar__item{
+		width: 350px;
+	}
+	.tovar{
+		margin: 15px;
+	}
+	.tovar__title{
+		width: 350px;
+	}
+	.tovar__items{
+		flex-direction: column;
+	}
+	.Authorization__items{
+		flex-direction: column;
+		width: 350px;
+		margin: 15px;
+		border: none;
+	}
+	.backet__itembox{
+		flex-direction: column;
+	}
+	.promo-btn-box {
+		margin-bottom: 100px;
+	}
+	.promo__content{
+		flex-direction: column;
+	}
+	.catalog__filter{
+		flex-direction: column;
+	}
+	.breadcrumbs__text{
+		margin: 15px;
+	}
+	.catalog__title{
+		margin: 15px;
 	}
 }
