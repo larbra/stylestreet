@@ -950,6 +950,8 @@ button {
 	border: 1px solid #D8DDE4;
 	margin-top: 30px;
 	margin-bottom: 10px;
+	color: white;
+	outline: none;
 }
 
 .form button {
