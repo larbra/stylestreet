@@ -24,8 +24,8 @@ class TovarController extends Controller
     }
     public function catalog()
     {
-        $tovars = Tovar::all(); // Получаем все товары
-        $categories = Category::all(); // Получаем все категории
+        $tovars = Tovar::all();
+        $categories = Category::all();
 
         return view('pages.catalog', [
             'data' => $tovars,
@@ -34,8 +34,8 @@ class TovarController extends Controller
     }
     public function admin()
     {
-        $tovars = Tovar::all(); // Получаем все товары
-        $categories = Category::all(); // Получаем все категории
+        $tovars = Tovar::all();
+        $categories = Category::all();
 
         return view('pages.admin', [
             'data' => $tovars,
@@ -61,7 +61,7 @@ class TovarController extends Controller
     public function showCreateTovar()
     {
         $category = Category::all();
-        $colors = Color::all(); // Получаем все цвета из базы
+        $colors = Color::all();
 
         return view('pages.create', [
             'category' => $category,
@@ -104,13 +104,10 @@ class TovarController extends Controller
             'images.*.max' => 'Максимальный размер изображения :max КБ',
         ]);
 
-        // Сохраняем основное изображение
         $mainImage = $request->file('main_image');
         $mainImageName = time() . '_main.' . $mainImage->getClientOriginalExtension();
         $mainImage->storeAs('public/products', $mainImageName);
 
-
-        // Создаем товар
         $tovar = Tovar::create([
             'name' => $validatedData['name'],
             'price' => $validatedData['price'],
@@ -119,7 +116,6 @@ class TovarController extends Controller
             'image' => $mainImageName,
         ]);
 
-        // Сохраняем дополнительные изображения
         if ($request->hasFile('images')) {
             foreach ($request->file('images') as $image) {
                 $imageName = time() . '_' . $image->getClientOriginalName();
@@ -127,7 +123,7 @@ class TovarController extends Controller
 
                 ProductImage::create([
                     'product_id' => $tovar->id,
-                    'image_path' => $imageName, // Только имя файла
+                    'image_path' => $imageName,
                 ]);
             }
         }
@@ -194,9 +190,7 @@ class TovarController extends Controller
                 Storage::disk('public')->delete('public/products/' . $tovar->image);
             }
 
-            // Получаем оригинальное имя файла
             $filename = $request->file('image')->getClientOriginalName();
-            // Сохраняем файл с оригинальным именем
             $request->file('image')->storeAs('public/products', $filename, 'public');
             $validatedData['image'] = $filename;
         }

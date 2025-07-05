@@ -88,13 +88,10 @@
 
                             thumbnails.forEach(thumb => {
                                 thumb.addEventListener('click', function() {
-                                    // Удаляем active у всех миниатюр
                                     thumbnails.forEach(t => t.classList.remove('active'));
 
-                                    // Добавляем active текущей
                                     this.classList.add('active');
 
-                                    // Обновляем основное изображение
                                     mainImage.src = this.dataset.image;
                                 });
                             });

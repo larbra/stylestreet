@@ -56,7 +56,7 @@
                                 <a href="{{ route('showLogin') }}" class="btn-login">Вход</a>
                                 <a href="{{ route('showRegister') }}" class="btn-login">Регистрация</a>
                             @endif
-                            @endif
+                        @endif
 
                         </div>
                     </div>

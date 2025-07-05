@@ -16,13 +16,12 @@ class Tovar extends Model
         'image'
     ];
 
-    // Связь с дополнительными изображениями
     public function images()
     {
         return $this->hasMany(ProductImage::class, 'product_id');
     }
     public function colors()
-{
-    return $this->belongsToMany(Color::class);
-}
+    {
+        return $this->belongsToMany(Color::class);
+    }
 }

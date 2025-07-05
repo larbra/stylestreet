@@ -39,12 +39,12 @@
                                     value="{{ $color->id }}">
                                 <label for="color-{{ $color->id }}"
                                     style="background-color: {{ $color->hex_code }};
-                              width: 30px;
-                              height: 30px;
-                              display: inline-block;
-                              border-radius: 50%;
-                              cursor: pointer;
-                              border: 2px solid #ddd;">
+                                        width: 30px;
+                                        height: 30px;
+                                        display: inline-block;
+                                        border-radius: 50%;
+                                        cursor: pointer;
+                                        border: 2px solid #ddd;">
                                 </label>
                                 <span>{{ $color->name }}</span>
                             </div>
@@ -79,9 +79,7 @@
             </div>
         </form>
     </div>
-
     <script>
-        // Оригинальный скрипт для основного изображения
         document.getElementById('image-upload').addEventListener('change', function(e) {
             const preview = document.getElementById('image-preview');
             const file = e.target.files[0];
@@ -100,7 +98,6 @@
             }
         });
 
-        // Новый скрипт для дополнительных изображений (без изменения стилей)
         document.getElementById('additional-images').addEventListener('change', function(e) {
             const previewsContainer = document.getElementById('additional-previews');
             previewsContainer.innerHTML = '';

@@ -27,7 +27,8 @@
             <div class="catalog-search">
                 <input type="text" id="search-input" placeholder="Поиск товаров по названию..." class="search-input">
                 <button class="search-btn" onclick="searchProducts()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="11" cy="11" r="8"></circle>
                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                     </svg>
@@ -36,7 +37,8 @@
 
             <div class="receipts__items catalog__items" id="products-container">
                 @foreach ($data as $tovar)
-                    <div class="receipts__item card" data-category="{{ $tovar->category }}" data-name="{{ strtolower($tovar->name) }}">
+                    <div class="receipts__item card" data-category="{{ $tovar->category }}"
+                        data-name="{{ strtolower($tovar->name) }}">
                         <div class="receipts__item-header">
                             <button class="receipts-btn">Новинка</button>
                             <a href="#"><img src="../../media/receipts/In favorites.svg" alt="#"
@@ -80,7 +82,6 @@
             const cards = document.querySelectorAll('.card');
             const buttons = document.querySelectorAll('.list__btns button');
 
-            // Показываем/скрываем карточки
             cards.forEach((card) => {
                 if (category === 'all' || card.dataset.category === category) {
                     card.classList.remove('hidden');
@@ -89,10 +90,8 @@
                 }
             });
 
-            // Убираем класс active у всех кнопок
             buttons.forEach((btn) => btn.classList.remove('active'));
 
-            // Добавляем класс active текущей кнопке
             button.classList.add('active');
         }
 
@@ -102,7 +101,6 @@
             const cards = document.querySelectorAll('.card');
 
             if (searchTerm.length < 2) {
-                // Если поисковый запрос слишком короткий, показываем все товары
                 cards.forEach(card => card.classList.remove('hidden'));
                 return;
             }
@@ -117,7 +115,6 @@
             });
         }
 
-        // Поиск при нажатии Enter
         document.getElementById('search-input').addEventListener('keyup', function(e) {
             if (e.key === 'Enter') {
                 searchProducts();
